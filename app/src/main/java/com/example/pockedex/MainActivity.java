@@ -4,22 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pockedex.model.Pokemon;
-import com.example.pockedex.model.PokemonType;
-import com.example.pockedex.repository.PokemonRepository;
-
 import android.os.Bundle;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class MainActivity extends AppCompatActivity {
 
-    private final PokemonRepository mPokemonRepository = new PokemonRepository();
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -34,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //(3)on donne l'adapteur
         recyclerView.setAdapter(adapter);
-
-        
-        adapter.getItemId(mPokemonRepository).get(PokemonRepository.class);
     }
 
 }
