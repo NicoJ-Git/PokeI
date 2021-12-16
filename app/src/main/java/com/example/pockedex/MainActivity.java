@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         
-        adapter.getItemId(mPokemonRepository.getPokemons());
+        adapter.getItemId(mPokemonRepository).get(PokemonRepository.class);
     }
 
 }
