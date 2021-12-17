@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.pockedex.repository.PokemonRepository;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //(3)on donne l'adapteur
         recyclerView.setAdapter(adapter);
+        adapter.displayPokemons(PokemonRepository.getPokemons());
     }
 
 }

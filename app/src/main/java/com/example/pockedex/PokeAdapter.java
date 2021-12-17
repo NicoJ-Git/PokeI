@@ -52,16 +52,14 @@ public class PokeAdapter extends RecyclerView.Adapter<PokeAdapter.PokeViewHolder
     }
 
     // (Nino E) on met à jour la liste interne de l'adapter (qui représente les pokémons à afficher) avec les bonnes données
-    //public void displayPokemons(List<Pokemon> pokemons) {
-        //this.pokemons.clear();
-        //this.pokemons.addAll(pokemons);
+    public void displayPokemons(List<Pokemon> pokemons) {
+       this.pokemons.clear();
+        this.pokemons.addAll(pokemons);
         // (Nino F) on dit à l'adapter de se mettre à jour visuellement
-        //notifyDatasetChanged();
-   // }
-
-    private void notifyDatasetChanged() {
-
+        this.notifyDataSetChanged();
     }
+
+
 
     public class PokeViewHolder extends RecyclerView.ViewHolder {
 
